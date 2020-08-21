@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Acropol</string>
+
+
+    <string-array name="options">
+        <item>рестораны</item>
+        <item>блюда</item>
+        <item>напитки</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,133 @@
+<resources>
+    <string name="app_name">Project_Holydays</string>
+    <string name="krasnodar_search_hint">Поиск в г. Краснодар</string>
+    <string name="Food">Поесть</string>
+    <string name="Entertainment">Развлечения</string>
+    <string name="Beauty">Красота</string>
+    <string name="Health">Здоровье</string>
+    <string name="Automobile">Авто</string>
+    <string name="Sports">Спорт</string>
+    <string name="Souvenir">Сувениры</string>
+    <string name="Education">Образование</string>
+    <string name="interesting_nearby">Интересные предложения рядом:</string>
+    <string name="suggestion1_text">Прими участие в промо-акции\n«Подарок за покупку»</string>
+    <string name="suggestion2_text">Новая Lada XCODE за 600 т.р.</string>
+    <string name="suggestion3_text">Лазерная коррекция зрения \nв клинике ТРИ-з</string>
+    <string name="suggestion4_text">Горный велосипед Merida Matts 6.15-MD</string>
+    <string name="feed_item1_price">7500 ₽\n3375 ₽</string>
+    <string name="feed_item1_discount">-55%</string>
+    <string name="feed_item1_name">Мужские беговые кроссовки Nike Free RN 5.0 2020</string>
+    <string name="feed_item2_price">45000 ₽\n27000 ₽</string>
+    <string name="feed_item2_discount">-40%</string>
+    <string name="feed_item2_name">Курсы программирования Java/Kotlin</string>
+    <string name="feed_item3_price">1600 ₽\n1280 ₽</string>
+    <string name="feed_item3_discount">-20%</string>
+    <string name="feed_item3_name">Vaporesso Renova ZERO</string>
+    <string name="profile_login_title">Войти</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="sign_in_button_text">Войти</string>
+    <string name="register_button_text">Пройти регистрацию</string>
+    <string name="registration_screen_title">Регистрация</string>
+    <string name="reg_user_name">Имя пользователя</string>
+    <string name="hint_user_name">Иван Иванов</string>
+    <string name="reg_user_login">Логин</string>
+    <string name="hint_user_login">Ivanov</string>
+    <string name="reg_user_email">Email</string>
+    <string name="hint_user_email">ivanov@mail.ru</string>
+    <string name="reg_user_phone_number">Телефон</string>
+    <string name="hint_user_phone_number">+79991234564</string>
+    <string name="reg_user_birthdate">Дата рождения</string>
+    <string name="hint_user_birthdate">10.10.1991</string>
+    <string name="reg_user_password1">Пароль</string>
+    <string name="hint_user_password1">от 6 до 32 символов</string>
+    <string name="reg_user_password2">Повторить пароль</string>
+    <string name="hint_user_password2">от 6 до 32 символов</string>
+    <string name="reg_checkbox_license_text">Я согласен с условиями пользования приложения</string>
+    <string name="reg_button_register_text">Зарегистрироваться</string>
+
+    <!--спиннер городов-->
+    <string-array name="city">
+        <item>Краснодар</item>
+        <item>Анапа</item>
+        <item>Москва</item>
+        <item>Новороссийск</item>
+        <item>Санкт-Петербург</item>
+        <item>Сочи</item>
+    </string-array>
+
+    <!--массивы для подкатегорий-->
+    <string-array name="FoodSubCategories">
+        <item>Фастфуд</item>
+        <item>Ресторан</item>
+        <item>Японская кухня</item>
+        <item>Пицца</item>
+        <item>Доставка еды</item>
+        <item>Продукты</item>
+    </string-array>
+
+    <string-array name="EntertainmentSubCategories">
+        <item>Аттракционы</item>
+        <item>Организация праздников</item>
+        <item>Квест</item>
+        <item>Театр</item>
+        <item>Аквапарк</item>
+        <item>Кинотеатр</item>
+    </string-array>
+
+    <string-array name="BeautySubCategories">
+        <item>Салон красоты</item>
+        <item>Барбершоп</item>
+        <item>Маникюр</item>
+        <item>Спа-салон</item>
+        <item>Визажист</item>
+        <item>Тату-студия</item>
+    </string-array>
+
+    <string-array name="HealthSubCategories">
+        <item>Аптека</item>
+        <item>Поликлиника</item>
+        <item>Стоматология</item>
+        <item>Диетолог</item>
+        <item>Скорая медицинская помощь</item>
+        <item>Пластическая хирургия</item>
+    </string-array>
+
+    <string-array name="AutomobileSubCategories">
+        <item>Автомойка</item>
+        <item>СТО</item>
+        <item>Диангостика</item>
+        <item>Товары для авто</item>
+        <item>Автошкола</item>
+        <item>Заправочная станция</item>
+    </string-array>
+
+    <string-array name="SportsSubCategories">
+        <item>Товары для спорта</item>
+        <item>Секции</item>
+        <item>Фитнес</item>
+        <item>Спортивное питание</item>
+        <item>Йога</item>
+        <item>Активный отдых</item>
+    </string-array>
+
+    <string-array name="SouvenirSubCategories">
+        <item>Сувенирная лавка</item>
+        <item>Подарки</item>
+        <item></item>
+        <item>Декор</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="EducationSubCategories">
+        <item>Школы</item>
+        <item>Высшее образование</item>
+        <item>Дошкольное образование</item>
+        <item>Кружки</item>
+        <item>Английский язык</item>
+        <item>Курсы</item>
+    </string-array>
+    <string name="title_activity_map_main">Map</string>
+
+</resources>
