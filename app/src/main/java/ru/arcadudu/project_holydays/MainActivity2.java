@@ -3,11 +3,7 @@ package ru.arcadudu.project_holydays;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -15,7 +11,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +22,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     public final static String CATEGORY = "category_icon";
     private final static String FILTER = "filter";
     private final static String TITLE = "title";
-    //private final static String RESOURCE = "resource";
+
 
 
     @Override
