@@ -1,6 +1,8 @@
 package ru.arcadudu.project_holydays;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,21 +12,37 @@ import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
+    CategoryAdapter adapter;
+    RecyclerView recyclerView;
+    ImageView iv_settings; // Иконка настроек
 
-    ImageView iv_settings; // настройки
+    // Массив иконок категорий
+    private int[] images = {
+            R.drawable.icon_food, R.drawable.icon_entertainment,
+            R.drawable.icon_beauty, R.drawable.icon_health, R.drawable.icon_auto,
+            R.drawable.icon_sports, R.drawable.icon_souvenir, R.drawable.icon_education
+    };
 
     final String LOG_ENTRY = "TO SETTINGS";
-
-    // Экстра для интента
-    private static final String CATEGORY = "category_icon";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Массив названий категорий
+        String[] categories = getResources().getStringArray(R.array.categories);
+
+        // Adapter
+        adapter = new CategoryAdapter(this, categories, images);
+
+        // RecyclerView logic
+        recyclerView = findViewById(R.id.recycler_view_categories);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         // Поле ввода "Поиск в г. Краснодар"
         EditText et_search = findViewById(R.id.et_search_in_KRD);
@@ -51,71 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        // Карусель, иконки:
-        ImageView icon_food = findViewById(R.id.icon_food);
-        ImageView icon_beauty = findViewById(R.id.icon_beauty);
-        ImageView icon_health = findViewById(R.id.icon_health);
-        ImageView icon_sports = findViewById(R.id.icon_sports);
-        ImageView icon_souvenir = findViewById(R.id.icon_souvenir);
-        ImageView icon_education = findViewById(R.id.icon_education);
-        ImageView icon_automobile = findViewById(R.id.icon_automobile);
-        ImageView icon_entertainment = findViewById(R.id.icon_entertainment);
 
-        // Стартовая анимация карусели иконок:
-        final Animation startAnimation = AnimationUtils.loadAnimation(this, R.anim.fadein);
-        icon_food.startAnimation(startAnimation);
-        icon_beauty.startAnimation(startAnimation);
-        icon_health.startAnimation(startAnimation);
-        icon_sports.startAnimation(startAnimation);
-        icon_souvenir.startAnimation(startAnimation);
-        icon_education.startAnimation(startAnimation);
-        icon_automobile.startAnimation(startAnimation);
-        icon_entertainment.startAnimation(startAnimation);
-
-        // Слушатели на иконках:
-        icon_food.setOnClickListener(this);
-        icon_beauty.setOnClickListener(this);
-        icon_health.setOnClickListener(this);
-        icon_sports.setOnClickListener(this);
-        icon_souvenir.setOnClickListener(this);
-        icon_education.setOnClickListener(this);
-        icon_automobile.setOnClickListener(this);
-        icon_entertainment.setOnClickListener(this);
-    }
-
-
-    // Нажатие на иконки карусели = переход на активити категорий
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-        switch (view.getId()) {
-            case R.id.icon_food:
-                intent.putExtra(CATEGORY, "Food");
-                break;
-            case R.id.icon_beauty:
-                intent.putExtra(CATEGORY, "Beauty");
-                break;
-            case R.id.icon_health:
-                intent.putExtra(CATEGORY, "Health");
-                break;
-            case R.id.icon_sports:
-                intent.putExtra(CATEGORY, "Sports");
-                break;
-            case R.id.icon_souvenir:
-                intent.putExtra(CATEGORY, "Souvenir");
-                break;
-            case R.id.icon_education:
-                intent.putExtra(CATEGORY, "Education");
-                break;
-            case R.id.icon_automobile:
-                intent.putExtra(CATEGORY, "Automobile");
-                break;
-            case R.id.icon_entertainment:
-                intent.putExtra(CATEGORY, "Entertainment");
-                break;
-        }
-        startActivity(intent);
-        overridePendingTransition(0, 0);
     }
 
 

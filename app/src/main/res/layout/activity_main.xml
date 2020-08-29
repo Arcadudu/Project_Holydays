@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -53,191 +54,21 @@
 
         </FrameLayout>
 
-        <HorizontalScrollView
-            android:id="@+id/hsv_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/background1"
-            android:scrollbars="none">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
 
-            <TableLayout
-                android:id="@+id/ll_carousel_categories"
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_categories"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingStart="10dp"
-                tools:ignore="RtlSymmetry">
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TableRow android:id="@+id/tr_carousel_icons">
-
-
-                    <ImageView
-                        android:id="@+id/icon_food"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_marginEnd="15dp"
-                        android:background="@drawable/style_carousel_icon_common"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/icon_food" />
-
-                    <ImageView
-                        android:id="@+id/icon_entertainment"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_marginEnd="15dp"
-                        android:background="@drawable/style_carousel_icon_common"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/icon_entertainment" />
-
-                    <ImageView
-                        android:id="@+id/icon_beauty"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_marginEnd="15dp"
-                        android:background="@drawable/style_carousel_icon_common"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/icon_beauty" />
-
-                    <ImageView
-                        android:id="@+id/icon_health"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_marginEnd="15dp"
-                        android:background="@drawable/style_carousel_icon_common"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/icon_health" />
-
-
-                    <ImageView
-                        android:id="@+id/icon_automobile"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_marginEnd="15dp"
-                        android:background="@drawable/style_carousel_icon_common"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/icon_auto" />
-
-                    <ImageView
-                        android:id="@+id/icon_sports"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_marginEnd="15dp"
-                        android:background="@drawable/style_carousel_icon_common"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/icon_sports" />
-
-
-                    <ImageView
-                        android:id="@+id/icon_souvenir"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_marginEnd="15dp"
-                        android:background="@drawable/style_carousel_icon_common"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/icon_souvenir" />
-
-                    <ImageView
-                        android:id="@+id/icon_education"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_marginEnd="15dp"
-                        android:background="@drawable/style_carousel_icon_common"
-                        android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/icon_education" />
-
-
-                </TableRow>
-
-                <TableRow>
-
-                    <TextView
-                        android:id="@+id/tv_food"
-                        android:layout_width="70dp"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:paddingStart="-15dp"
-                        android:text="@string/Food"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/tv_entertainment"
-                        android:layout_width="70dp"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:paddingStart="-15dp"
-                        android:text="@string/Entertainment"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/tv_beauty"
-                        android:layout_width="60dp"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:paddingStart="-15dp"
-                        android:text="@string/Beauty"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/tv_health"
-                        android:layout_width="60dp"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:paddingStart="-15dp"
-                        android:text="@string/Health"
-                        android:textSize="12sp" />
-
-
-                    <TextView
-                        android:id="@+id/tv_automobile"
-                        android:layout_width="70dp"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:paddingStart="-15dp"
-                        android:text="@string/Automobile"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/tv_sports"
-                        android:layout_width="70dp"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:paddingStart="-15dp"
-                        android:text="@string/Sports"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/tv_souvenir"
-                        android:layout_width="70dp"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:paddingStart="-15dp"
-                        android:text="@string/Souvenir"
-                        android:textSize="12sp" />
-
-
-                    <TextView
-                        android:id="@+id/tv_education"
-                        android:layout_width="70dp"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:paddingStart="-15dp"
-                        android:text="@string/Education"
-                        android:textSize="12sp" />
-
-
-                </TableRow>
-
-
-            </TableLayout>
-        </HorizontalScrollView>
 
         <LinearLayout
 
@@ -493,6 +324,8 @@
                 android:layout_gravity="center"
                 android:background="@drawable/style_feed_items"
                 android:scaleType="fitXY"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:src="@drawable/item3_zero_vape_device" />
 
             <TextView

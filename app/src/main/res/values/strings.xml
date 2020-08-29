@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Project_Holydays</string>
     <string name="krasnodar_search_hint">Поиск в г. Краснодар</string>
+
     <string name="Food">Поесть</string>
     <string name="Entertainment">Развлечения</string>
     <string name="Beauty">Красота</string>
@@ -9,6 +10,18 @@
     <string name="Sports">Спорт</string>
     <string name="Souvenir">Сувениры</string>
     <string name="Education">Образование</string>
+
+    <string-array name="categories">
+        <item>Поесть</item>
+        <item>Развлечения</item>
+        <item>Красота</item>
+        <item>Здоровье</item>
+        <item>Авто</item>
+        <item>Спорт</item>
+        <item>Сувениры</item>
+        <item>Образование</item>
+    </string-array>
+
     <string name="interesting_nearby">Интересные предложения рядом:</string>
     <string name="suggestion1_text">Прими участие в промо-акции\n«Подарок за покупку»</string>
     <string name="suggestion2_text">Новая Lada XCODE за 600 т.р.</string>
