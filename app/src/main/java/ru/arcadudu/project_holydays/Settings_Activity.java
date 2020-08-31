@@ -18,7 +18,7 @@ public class Settings_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings_);
+        setContentView(R.layout.activity_settings);
 
         // Спиннер
         cities = findViewById(R.id.spinner_cities);

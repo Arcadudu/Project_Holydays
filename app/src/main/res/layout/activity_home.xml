@@ -21,14 +21,16 @@
 
         <EditText
             android:id="@+id/et_search_in_KRD"
-            android:layout_width="344dp"
+            android:layout_width="0dp"
             android:layout_height="40dp"
+            android:layout_marginEnd="15dp"
             android:autofillHints=""
             android:background="@drawable/style_edit_text"
             android:hint="@string/krasnodar_search_hint"
             android:paddingStart="35dp"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_settings"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,10 +52,8 @@
             android:id="@+id/iv_settings"
             android:layout_width="30dp"
             android:layout_height="40dp"
-            android:layout_marginStart="10dp"
             android:src="@drawable/icon_menu"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/et_search_in_KRD"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -112,7 +112,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:paddingStart="10dp"
-        android:paddingEnd="10dp" />
+        android:paddingEnd="10dp"
+        android:layout_marginBottom="10dp"/>
 
 
 </LinearLayout>
