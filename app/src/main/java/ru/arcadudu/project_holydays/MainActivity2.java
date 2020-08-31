@@ -1,7 +1,5 @@
 package ru.arcadudu.project_holydays;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,10 +9,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import ru.arcadudu.project_holydays.home_activity.HomeActivity;
 
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,7 +23,6 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     public final static String CATEGORY = "category_icon";
     private final static String FILTER = "filter";
     private final static String TITLE = "title";
-
 
 
     @Override
@@ -63,7 +63,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         icon_main2_active.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+                Intent intent = new Intent(MainActivity2.this, HomeActivity.class);
                 startActivity(intent);
                 overridePendingTransition(0, 0);
             }

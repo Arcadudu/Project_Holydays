@@ -27,15 +27,22 @@
     <string name="suggestion2_text">Новая Lada XCODE за 600 т.р.</string>
     <string name="suggestion3_text">Лазерная коррекция зрения \nв клинике ТРИ-з</string>
     <string name="suggestion4_text">Горный велосипед Merida Matts 6.15-MD</string>
+
     <string name="feed_item1_price">7500 ₽\n3375 ₽</string>
     <string name="feed_item1_discount">-55%</string>
     <string name="feed_item1_name">Мужские беговые кроссовки Nike Free RN 5.0 2020</string>
+
     <string name="feed_item2_price">45000 ₽\n27000 ₽</string>
     <string name="feed_item2_discount">-40%</string>
     <string name="feed_item2_name">Курсы программирования Java/Kotlin</string>
+
     <string name="feed_item3_price">1600 ₽\n1280 ₽</string>
     <string name="feed_item3_discount">-20%</string>
     <string name="feed_item3_name">Vaporesso Renova ZERO</string>
+
+    <string name="feed_item4_discount">-15%</string>
+    <string name="feed_item4_name">Дека для скейта CHOCOLATE BANNEROT ONE OFF DECK / NS 8.5"</string>
+
     <string name="profile_login_title">Войти</string>
     <string name="login">Логин</string>
     <string name="password">Пароль</string>

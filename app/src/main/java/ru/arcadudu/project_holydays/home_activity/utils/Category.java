@@ -1,4 +1,4 @@
-package ru.arcadudu.project_holydays;
+package ru.arcadudu.project_holydays.home_activity.utils;
 
 public class Category {
 

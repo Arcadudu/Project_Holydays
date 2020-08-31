@@ -1,4 +1,4 @@
-package ru.arcadudu.project_holydays;
+package ru.arcadudu.project_holydays.home_activity.utils;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import ru.arcadudu.project_holydays.R;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder> {
 
@@ -27,7 +29,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.my_iconbar_recycler, parent, false);
+        View view = inflater.inflate(R.layout.my_viewholder_category, parent, false);
         return new MyViewHolder(view);
     }
 

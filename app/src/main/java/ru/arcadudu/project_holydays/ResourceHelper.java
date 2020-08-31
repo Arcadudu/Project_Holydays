@@ -1,7 +1,5 @@
 package ru.arcadudu.project_holydays;
 
-import java.util.Arrays;
-
 public class ResourceHelper {
     public static int getIcon(String categoryName) {
         switch (categoryName) {

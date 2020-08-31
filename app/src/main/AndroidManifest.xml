@@ -41,7 +41,7 @@
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ProfileLoginActivity" />
         <activity android:name=".Settings_Activity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".home_activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
