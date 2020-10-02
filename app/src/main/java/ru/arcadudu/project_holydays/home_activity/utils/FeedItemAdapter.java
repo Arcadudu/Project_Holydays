@@ -1,5 +1,6 @@
 package ru.arcadudu.project_holydays.home_activity.utils;
 
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -25,9 +26,14 @@ public class FeedItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new RecyclerView.ViewHolder
                 (LayoutInflater.from(parent.getContext()).inflate
-                        (R.layout.my_viewholder_feed, parent, false)) {
+                        (R.layout.my_new_feed, parent, false)) {
         };
     }
+
+//    @Override
+//    public int getItemViewType(int position) {
+//        return super.getItemViewType(position);
+//    }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
@@ -36,7 +42,12 @@ public class FeedItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         TextView sale = holder.itemView.findViewById(R.id.tv_feed_sale);
         sale.setText(feedItemList.get(position).getSale());
         TextView oldPrice = holder.itemView.findViewById(R.id.tv_old_price);
+
+        //TextView someTextView = (TextView) findViewById(R.id.some_text_view);
+        // someTextView.setText(someString);
+        // someTextView.setPaintFlags(someTextView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         oldPrice.setText(feedItemList.get(position).getOldPrice());
+        oldPrice.setPaintFlags(oldPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         TextView newPrice = holder.itemView.findViewById(R.id.tv_new_price);
         newPrice.setText(feedItemList.get(position).getNewPrice());
         TextView description = holder.itemView.findViewById(R.id.tv_feed_item_description);
@@ -48,3 +59,4 @@ public class FeedItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         return feedItemList.size();
     }
 }
+// переделать под кастомный холдер

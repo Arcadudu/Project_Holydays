@@ -46,36 +46,8 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        //// Categories :
-
-        String[] category_titles = getResources().getStringArray(R.array.categories);
-
-        // Adapter
-        categoryAdapter = new CategoryAdapter(this, category_titles, category_images);
-
-        // Category RecyclerView set
-        categoryRecycler = findViewById(R.id.recycler_view_categories);
-        categoryRecycler.setAdapter(categoryAdapter);
-        categoryRecycler.setHasFixedSize(true);
-        categoryRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
-
-        //// Nearby :
-
-        List<Nearby> nearbyList = new ArrayList<>();
-        nearbyList.add(new Nearby(R.drawable.dodo_pizza, getResources().getString(R.string.suggestion1_text)));
-        nearbyList.add(new Nearby(R.drawable.lada_xcode, getResources().getString(R.string.suggestion2_text)));
-        nearbyList.add(new Nearby(R.drawable.clinic, getResources().getString(R.string.suggestion3_text)));
-        nearbyList.add(new Nearby(R.drawable.bicycle_merida, getResources().getString(R.string.suggestion4_text)));
-
-        // Adapter
-        nearbyAdapter = new NearbyAdapter(nearbyList);
-
-        // Nearby RecyclerView set
-        nearbyRecycler = findViewById(R.id.recycler_view_nearby_suggest);
-        nearbyRecycler.setHasFixedSize(true);
-        nearbyRecycler.setAdapter(nearbyAdapter);
-        nearbyRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        setCategories();
+        setNearby();
 
 
         //// Feed :
@@ -124,6 +96,40 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void setNearby() {
+        //// Nearby :
+
+        List<Nearby> nearbyList = new ArrayList<>();
+        nearbyList.add(new Nearby(R.drawable.dodo_pizza, getResources().getString(R.string.suggestion1_text)));
+        nearbyList.add(new Nearby(R.drawable.lada_xcode, getResources().getString(R.string.suggestion2_text)));
+        nearbyList.add(new Nearby(R.drawable.clinic, getResources().getString(R.string.suggestion3_text)));
+        nearbyList.add(new Nearby(R.drawable.bicycle_merida, getResources().getString(R.string.suggestion4_text)));
+
+        // Adapter
+        nearbyAdapter = new NearbyAdapter(nearbyList);
+
+        // Nearby RecyclerView set
+        nearbyRecycler = findViewById(R.id.recycler_view_nearby_suggest);
+        nearbyRecycler.setHasFixedSize(true);
+        nearbyRecycler.setAdapter(nearbyAdapter);
+        nearbyRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+    }
+
+    private void setCategories() {
+        //// Categories :
+
+        String[] category_titles = getResources().getStringArray(R.array.categories);
+
+        // Adapter
+        categoryAdapter = new CategoryAdapter(this, category_titles, category_images);
+
+        // Category RecyclerView set
+        categoryRecycler = findViewById(R.id.recycler_view_categories);
+        categoryRecycler.setAdapter(categoryAdapter);
+        categoryRecycler.setHasFixedSize(true);
+        categoryRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
     }
 
 

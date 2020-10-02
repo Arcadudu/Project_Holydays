@@ -62,8 +62,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="95dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp">
+        >
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -71,7 +70,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:clipToPadding="false"
+            android:paddingStart="10dp"
+            android:paddingEnd="5dp"
+            android:overScrollMode="never"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -104,7 +107,9 @@
         android:orientation="horizontal"
         android:paddingStart="10dp"
         android:paddingTop="6dp"
-        android:paddingBottom="6dp" />
+        android:paddingBottom="6dp"
+        tools:ignore="RtlSymmetry"
+        android:overScrollMode="never"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_feed"
@@ -113,7 +118,9 @@
         android:layout_marginTop="6dp"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:overScrollMode="never"
+        />
 
 
 </LinearLayout>

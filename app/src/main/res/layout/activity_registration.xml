@@ -1,208 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background1"
-    android:orientation="vertical"
-    android:paddingTop="10dp"
-    tools:context=".Settings_Activity">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <FrameLayout
+        <ImageView
+            android:id="@+id/iv_btn_back_to_profileLogin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tv_settings_label"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/registration_screen_title"
+            android:textColor="@color/almostBlack"
+            android:textSize="23sp"
+            android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/iv_btn_back_to_profileLogin"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="start|center_vertical"
-                android:src="@drawable/icon_back" />
+    </FrameLayout>
 
-            <TextView
-                android:id="@+id/tv_settings_label"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="@string/registration_screen_title"
-                android:textColor="@color/almostBlack"
-                android:textSize="23sp"
-                android:textStyle="bold" />
-
-        </FrameLayout>
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background1"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        tools:context=".Settings_Activity">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="100dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:paddingBottom="15dp"
-            >
+            android:orientation="vertical">
 
-            <!--name-->
-            <TextView
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="3dp"
-                android:text="@string/reg_user_name"
-                android:textSize="17sp" />
+                android:orientation="vertical"
+                android:paddingStart="15dp"
+                android:paddingTop="100dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="15dp">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="@drawable/style_edit_text"
-                android:hint="@string/hint_user_name"
-                android:inputType="text"
-                android:paddingStart="5dp"
-                android:textSize="16sp"
-                tools:ignore="RtlSymmetry" />
+                <!--name-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/reg_user_name"
+                    android:textSize="17sp" />
 
-            <!--login-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="3dp"
-                android:text="@string/reg_user_login"
-                android:textSize="17sp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/style_edit_text"
+                    android:hint="@string/hint_user_name"
+                    android:inputType="text"
+                    android:paddingStart="5dp"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="@drawable/style_edit_text"
-                android:hint="@string/hint_user_login"
-                android:inputType="text"
-                android:paddingStart="5dp"
-                android:textSize="16sp"
-                tools:ignore="RtlSymmetry" />
+                <!--login-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/reg_user_login"
+                    android:textSize="17sp" />
 
-            <!--email-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="3dp"
-                android:text="@string/reg_user_email"
-                android:textSize="17sp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/style_edit_text"
+                    android:hint="@string/hint_user_login"
+                    android:inputType="text"
+                    android:paddingStart="5dp"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="@drawable/style_edit_text"
-                android:hint="@string/hint_user_email"
-                android:inputType="text"
-                android:paddingStart="5dp"
-                android:textSize="16sp"
-                tools:ignore="RtlSymmetry" />
+                <!--email-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/reg_user_email"
+                    android:textSize="17sp" />
 
-            <!--tel-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="3dp"
-                android:text="@string/reg_user_phone_number"
-                android:textSize="17sp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/style_edit_text"
+                    android:hint="@string/hint_user_email"
+                    android:inputType="text"
+                    android:paddingStart="5dp"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="@drawable/style_edit_text"
-                android:hint="@string/hint_user_phone_number"
-                android:inputType="phone"
-                android:paddingStart="5dp"
-                android:textSize="16sp"
-                tools:ignore="RtlSymmetry" />
+                <!--tel-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/reg_user_phone_number"
+                    android:textSize="17sp" />
 
-            <!--date of birth-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="3dp"
-                android:text="@string/reg_user_birthdate"
-                android:textSize="17sp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/style_edit_text"
+                    android:hint="@string/hint_user_phone_number"
+                    android:inputType="phone"
+                    android:paddingStart="5dp"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="@drawable/style_edit_text"
-                android:hint="@string/hint_user_birthdate"
-                android:inputType="date"
-                android:paddingStart="5dp"
-                android:textSize="16sp"
-                tools:ignore="RtlSymmetry" />
+                <!--date of birth-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/reg_user_birthdate"
+                    android:textSize="17sp" />
 
-            <!--password_first-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="3dp"
-                android:text="@string/reg_user_password1"
-                android:textSize="17sp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/style_edit_text"
+                    android:hint="@string/hint_user_birthdate"
+                    android:inputType="date"
+                    android:paddingStart="5dp"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="@drawable/style_edit_text"
-                android:hint="@string/hint_user_password1"
-                android:inputType="textPassword"
-                android:paddingStart="5dp"
-                android:textSize="16sp"
-                tools:ignore="RtlSymmetry" />
+                <!--password_first-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/reg_user_password1"
+                    android:textSize="17sp" />
 
-            <!--password_second-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="3dp"
-                android:text="@string/reg_user_password2"
-                android:textSize="17sp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/style_edit_text"
+                    android:hint="@string/hint_user_password1"
+                    android:inputType="textPassword"
+                    android:paddingStart="5dp"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="@drawable/style_edit_text"
-                android:hint="@string/hint_user_password2"
-                android:inputType="textPassword"
-                android:paddingStart="5dp"
-                android:textSize="16sp"
-                tools:ignore="RtlSymmetry" />
+                <!--password_second-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/reg_user_password2"
+                    android:textSize="17sp" />
 
-            <CheckBox
-                android:id="@+id/checkbox_license"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:checked="false"
-                android:paddingStart="5dp"
-                android:text="@string/reg_checkbox_license_text"
-                android:textColor="@color/almostBlack"
-                android:textSize="17sp"
-                tools:ignore="RtlSymmetry" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/style_edit_text"
+                    android:hint="@string/hint_user_password2"
+                    android:inputType="textPassword"
+                    android:paddingStart="5dp"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
 
-            <Button
-                android:id="@+id/btn_finish_registration"
-                android:layout_width="205dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/style_edit_text"
-                android:text="@string/reg_button_register_text" />
+                <CheckBox
+                    android:id="@+id/checkbox_license"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:checked="false"
+                    android:paddingStart="5dp"
+                    android:text="@string/reg_checkbox_license_text"
+                    android:textColor="@color/almostBlack"
+                    android:textSize="17sp"
+                    tools:ignore="RtlSymmetry" />
 
+                <Button
+                    android:id="@+id/btn_finish_registration"
+                    android:layout_width="205dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/style_edit_text"
+                    android:text="@string/reg_button_register_text" />
+
+
+            </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</LinearLayout>
