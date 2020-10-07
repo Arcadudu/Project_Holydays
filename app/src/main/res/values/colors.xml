@@ -5,6 +5,7 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorAccent1">#9EE8E1</color>
     <color name="black">#000000</color>
+    <color name="red">#33FF0000</color>
 
 <!--цвет рамки-->
     <color name="frameColor">#D6D6D6</color>
@@ -21,5 +22,6 @@
 
 <!--цвет тонких шрифтов-->
     <color name="darkGrey">#707070</color>
+    <color name="oldPrice">#707070</color>
 
 </resources>

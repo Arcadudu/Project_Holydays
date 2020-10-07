@@ -42,10 +42,6 @@ public class FeedItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         TextView sale = holder.itemView.findViewById(R.id.tv_feed_sale);
         sale.setText(feedItemList.get(position).getSale());
         TextView oldPrice = holder.itemView.findViewById(R.id.tv_old_price);
-
-        //TextView someTextView = (TextView) findViewById(R.id.some_text_view);
-        // someTextView.setText(someString);
-        // someTextView.setPaintFlags(someTextView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         oldPrice.setText(feedItemList.get(position).getOldPrice());
         oldPrice.setPaintFlags(oldPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         TextView newPrice = holder.itemView.findViewById(R.id.tv_new_price);

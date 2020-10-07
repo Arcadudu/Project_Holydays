@@ -76,8 +76,13 @@ public class HomeActivity extends AppCompatActivity {
 
         // Settings icon
         iv_settings = findViewById(R.id.iv_settings);
-        Animation settingsOn = AnimationUtils.loadAnimation(this, R.anim.rotate_scalein_fadein);
-        iv_settings.startAnimation(settingsOn);
+//        iv_settings.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(HomeActivity.this, ViewPagerActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         iv_settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

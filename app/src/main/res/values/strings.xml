@@ -1,4 +1,8 @@
 <resources>
+
+    <string name="BASE_URL">http://holidayapp82020.crabdance.com:13130</string>
+
+
     <string name="app_name">Project_Holydays</string>
     <string name="krasnodar_search_hint">Поиск в г. Краснодар</string>
 
